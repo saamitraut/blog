@@ -18,17 +18,25 @@
     totalRevenueChartOptions = {
       series: [
         {
-          name: '2021',
-          data: [18, 7, 15, 29, 18, 12, 9]
+          name: 'RevAmount',
+          data: [10000,15000,12000,14000,11000,12000]
         },
         {
-          name: '2020',
-          data: [-13, -18, -9, -14, -5, -17, -15]
+          name: 'DropRevAmount',
+          data: [800,200,300,100,400,300]
+        },
+		{
+          name: 'TotalFCT',
+          data: [1000,1200,1100,1150,1200,1100]
+        },
+		{
+          name: 'DropFCT',
+          data: [80,10,20,10,30,20]
         }
       ],
       chart: {
         height: 300,
-        stacked: true,
+        stacked: false,
         type: 'bar',
         toolbar: { show: false }
       },
@@ -78,7 +86,7 @@
         }
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        categories: ['30-Sep','01-Oct','02-Oct','03-Oct','04-Oct','05-Oct'],
         labels: {
           style: {
             fontSize: '13px',
@@ -269,10 +277,43 @@
         }
       }
     };
+  
   if (typeof totalRevenueChartEl !== undefined && totalRevenueChartEl !== null) {
     const totalRevenueChart = new ApexCharts(totalRevenueChartEl, totalRevenueChartOptions);
     totalRevenueChart.render();
-  }
+	
+		function function1(legend) {
+			let event = new MouseEvent("click", {
+				  bubbles: true,
+				  cancelable: true,
+				  view: window,
+				});
+			
+			// Get all elements with the class "apexcharts-legend-text"
+			const legendItems = document.querySelectorAll('.apexcharts-legend-text');
+
+			// Loop through the elements and check if the text content matches legend
+			legendItems.forEach((legendItem) => {		
+			  if (legendItem.textContent.includes(legend)) {
+				legendItem.dispatchEvent(event);
+			  }
+			});	  
+		}
+		
+		setTimeout(function () {
+			function1("RevAmount");function1("DropRevAmount");function1("TotalFCT");function1("DropFCT"); 
+		}, 100); // Adjust the delay as needed
+	
+		const legendItems = document.querySelectorAll('.apexcharts-legend-text');
+
+		// Loop through the elements and check if the text content matches legend
+		legendItems.forEach((legendItem) => {		
+		  if (legendItem.textContent.includes()) {
+			legendItem.dispatchEvent(event);
+		  }
+		});	  
+	
+	}
 
   // Growth Chart - Radial Bar Chart
   // --------------------------------------------------------------------
