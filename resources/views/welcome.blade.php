@@ -22,7 +22,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Sangli Media Communication Pvt Ltd!</title>
+    <title>Media Nucleus!</title>
 
     <meta name="description" content="" />
 
@@ -62,8 +62,8 @@
   <body>
       <div class="container-xxl container-p-y">
       <div class="misc-wrapper">
-        <h2 class="mb-2 mx-2">Sangli Media Communication Pvt Ltd!</h2>
-        <p class="mb-4 mx-2">Inventory Management</p>
+        <h2 class="mb-2 mx-2">Media Nucleus!</h2>
+        <p class="mb-4 mx-2">BATS</p>
      
         @if (Route::has('login'))
                 <div class="top-right links">

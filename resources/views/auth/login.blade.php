@@ -128,10 +128,11 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bolder" style="text-transform: capitalize !important" >icc network</span>
+                  <span class="app-brand-text demo text-body fw-bolder" style="text-transform: capitalize !important" >Media Nucleus</span>
                 </a>
               </div>
-<h4 class="mb-2">Welcome to Inventory! 👋</h4>
+			  
+<h4 class="mb-2">Welcome to BATS! 👋</h4>
               <p class="mb-4">Please sign-in to your account and start the adventure</p>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
